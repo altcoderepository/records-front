@@ -1,17 +1,21 @@
-import { getAllLabels } from "@features";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { getAllLabels, ViewData } from "@features";
+import { useQuery } from "@tanstack/react-query";
 
 export const Admin = () => {
-  const queryClient = useQueryClient();
+  const { data, isError, isPending } = useQuery({
+    queryKey: ["labels"],
+    queryFn: getAllLabels,
+    retry: false,
+    staleTime: 1000,
+  });
 
-  const query = useQuery({ queryKey: ["labels"], queryFn: getAllLabels });
-
-  return (
-    <div>
-      Hello from Admin!{" "}
-      {query.data?.map((label) => (
-        <div key={label.id}>{label.name}</div>
-      ))}
-    </div>
-  );
+  if (isPending) {
+    return <div>Pending...</div>;
+  }
+  if (isError) {
+    return <div>Server error!</div>;
+  }
+  if (data) {
+    return <ViewData data={data} />;
+  }
 };
