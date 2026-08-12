@@ -1,4 +1,5 @@
-import { getAllLabels, ViewData } from "@features";
+import { getAllLabels } from "@features/api";
+import { ViewData } from "@features/components";
 import { useQuery } from "@tanstack/react-query";
 
 export const Admin = () => {

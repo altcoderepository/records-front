@@ -1,4 +1,5 @@
-import { axiosInstance, type Label, type Labels } from "@shared";
+import { axiosInstance } from "@shared/api/client";
+import type { Label, Labels } from "@shared/types";
 
 export const patchLabel: (
   id: Label["id"],

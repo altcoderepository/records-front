@@ -1,2 +1,2 @@
-export * from "./api";
-export * from "./components";
+export * as api from "./api";
+export * as components from "./components";

@@ -1,10 +1,10 @@
-import type { Labels } from "@shared";
 import { Button, Table, Typography, type TableProps } from "antd";
 import { useState, type FC } from "react";
 
 import { AddLabelModal } from "../AddLabelModal";
 import { DeleteLabelButton } from "../DeleteLabelButton";
 import { EditLabelButton } from "../EditLabelButton";
+import type { Labels } from "@shared/types";
 
 interface DataType {
   key: number;

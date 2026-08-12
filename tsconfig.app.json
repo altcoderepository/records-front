@@ -25,13 +25,13 @@
 
     /* Aliases */
     "paths": {
-      "@": ["./src"],
-      "@app": ["./src/app"],
-      "@entries": ["./src/entries"],
-      "@features": ["./src/features"],
+      // "@/*": ["./src/*"],
+      "@app/*": ["./src/app/*"],
+      "@entries/*": ["./src/entries/*"],
+      "@features/*": ["./src/features/*"],
       "@pages": ["./src/pages"],
-      "@shared": ["./src/shared"],
-      "@widgets": ["./src/widgets"],
+      "@shared/*": ["./src/shared/*"],
+      "@widgets/*": ["./src/widgets/*"],
       "@env": ["./src/env"]
     },
     "outDir": "./dist"

@@ -23,5 +23,22 @@ export default defineConfig([
     languageOptions: {
       globals: globals.browser,
     },
+    settings: {
+      "import/resolver": {
+        alias: {
+          map: [
+            ["@", "./src"],
+            ["@app", "./src/app"],
+            ["@entries", "./src/entries"],
+            ["@features", "./src/features/*"],
+            ["@pages", "./src/pages"],
+            ["@shared", "./src/shared"],
+            ["@widgets", "./src/widgets"],
+            ["@env", "./src/env"],
+          ],
+          extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+        },
+      },
+    },
   },
 ]);

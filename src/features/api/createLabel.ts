@@ -1,4 +1,5 @@
-import { axiosInstance, type LabelPayload, type Labels } from "@shared";
+import { axiosInstance } from "@shared/api/client";
+import type { LabelPayload, Labels } from "@shared/types";
 
 export const createLabel: (payload: LabelPayload) => Promise<Labels> = (
   payload,

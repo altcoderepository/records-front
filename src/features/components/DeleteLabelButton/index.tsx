@@ -3,8 +3,8 @@ import type { FC } from "react";
 
 import { DeleteOutlined } from "@ant-design/icons";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { deleteLabel } from "../../api";
-import type { Label } from "@shared";
+import type { Label } from "@shared/types";
+import { deleteLabel } from "@features/api";
 
 type Props = {
   labelId: Label["id"];

@@ -1,4 +1,4 @@
-import { routes } from "@app";
+import { routes } from "@app/routing";
 import { Link } from "@tanstack/react-router";
 import { Layout } from "antd";
 

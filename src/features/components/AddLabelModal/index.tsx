@@ -1,9 +1,9 @@
+import { createLabel } from "@features/api";
+import type { LabelPayload } from "@shared/types";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button, Form, Input, Modal, Space } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import type { FC } from "react";
-import { createLabel } from "../../api";
-import type { LabelPayload } from "../../../shared/types";
 
 type Props = {
   open: boolean;
