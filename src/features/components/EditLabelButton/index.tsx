@@ -1,10 +1,11 @@
-import { Button, Drawer, Form, Input, Space, Tooltip } from "antd";
 import { EditOutlined } from "@ant-design/icons";
-import { useState, type FC } from "react";
-
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import type { Label } from "@shared/types";
+import { Button, Drawer, Form, Input, Space, Tooltip } from "antd";
+
+import { type FC, useState } from "react";
+
 import { getLabel, patchLabel } from "@features/api";
+import type { Label } from "@shared/types";
 
 type Props = {
   labelId: Label["id"];

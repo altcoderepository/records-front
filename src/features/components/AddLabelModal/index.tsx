@@ -1,9 +1,10 @@
-import { createLabel } from "@features/api";
-import type { LabelPayload } from "@shared/types";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Button, Form, Input, Modal, Space } from "antd";
-import TextArea from "antd/es/input/TextArea";
+
 import type { FC } from "react";
+
+import { createLabel } from "@features/api";
+import type { LabelPayload } from "@shared/types";
 
 type Props = {
   open: boolean;
@@ -59,7 +60,7 @@ export const AddLabelModal: FC<Props> = ({ open, onClose }) => {
             { min: 15, message: "Описание должно быть не менее 15 символов" },
           ]}
         >
-          <TextArea rows={4} />
+          <Input.TextArea rows={4} />
         </Form.Item>
         <Space>
           <Button type="primary" htmlType="submit" disabled={isPending}>

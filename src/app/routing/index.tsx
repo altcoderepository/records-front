@@ -1,12 +1,14 @@
 import {
+  Outlet,
   createRootRoute,
   createRoute,
   createRouter,
-  Outlet,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import { Container } from "./layouts";
+
 import { About, Admin, Home } from "@pages";
+
+import { Container } from "./layouts";
 
 const rootRoute = createRootRoute({
   component: () => (

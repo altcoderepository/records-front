@@ -1,4 +1,5 @@
 import { existsSync } from "fs";
+
 import { envPath } from "../paths/index.ts";
 
 /** Если есть файл .env, забираем переменные окружения из него */

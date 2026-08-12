@@ -1,10 +1,11 @@
-import { Button, Popconfirm, Tooltip, type PopconfirmProps } from "antd";
-import type { FC } from "react";
-
 import { DeleteOutlined } from "@ant-design/icons";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import type { Label } from "@shared/types";
+import { Button, Popconfirm, type PopconfirmProps, Tooltip } from "antd";
+
+import type { FC } from "react";
+
 import { deleteLabel } from "@features/api";
+import type { Label } from "@shared/types";
 
 type Props = {
   labelId: Label["id"];

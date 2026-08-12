@@ -1,6 +1,7 @@
+import { useQuery } from "@tanstack/react-query";
+
 import { getAllLabels } from "@features/api";
 import { ViewData } from "@features/components";
-import { useQuery } from "@tanstack/react-query";
 
 export const Admin = () => {
   const { data, isError, isPending } = useQuery({
